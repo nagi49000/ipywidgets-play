@@ -7,6 +7,7 @@ class SimpleWidgets():
     def __init__(self):
         self._int_slider_widget = None
         self._clicked_next_widget = None
+        self._button = None
 
     def do_stuff_on_click(self, b):
         if self._clicked_next_widget:
@@ -32,9 +33,9 @@ class SimpleWidgets():
             self._int_slider_widget = x
             return x
 
-        button = widgets.Button(description="Click Me!")
-        display(button)
-        button.on_click(self.do_stuff_on_click)
+        self._button = widgets.Button(description="Click Me!")
+        display(self._button)
+        self._button.on_click(self.do_stuff_on_click)
 
     @property
     def last_value(self):
