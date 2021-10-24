@@ -16,7 +16,7 @@ def mock_interact(*args, **kwargs):
 
 patch('ipywidgets.interact', mock_interact).start()
 
-# can now import with the library patched
+# can now import the objects-under-test, with the library patched
 import simple_widgets  # noqa
 
 
