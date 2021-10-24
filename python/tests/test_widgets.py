@@ -1,4 +1,4 @@
-import ipywidgets  # noqa
+import ipywidgets
 from unittest.mock import patch
 from traitlets.traitlets import TraitError
 from pytest import raises
