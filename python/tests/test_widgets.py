@@ -20,7 +20,7 @@ patch('ipywidgets.interact', mock_interact).start()
 import simple_widgets  # noqa
 
 
-def test_simple_widgets_default_values(monkeypatch):
+def test_simple_widgets_default_values():
     # as we interact with the instance more widgets appear
 
     s = simple_widgets.SimpleWidgets()
@@ -42,7 +42,7 @@ def test_simple_widgets_default_values(monkeypatch):
     assert s.last_value == "alpha"
 
 
-def test_simple_widgets_to_dropdown(monkeypatch):
+def test_simple_widgets_to_dropdown():
     s = simple_widgets.SimpleWidgets()
     s.run_simple_widgets()
 
@@ -61,7 +61,7 @@ def test_simple_widgets_to_dropdown(monkeypatch):
     assert s.last_value == "gamma"
 
 
-def test_simple_widgets_to_checkbox(monkeypatch):
+def test_simple_widgets_to_checkbox():
     s = simple_widgets.SimpleWidgets()
     s.run_simple_widgets()
 
@@ -76,7 +76,7 @@ def test_simple_widgets_to_checkbox(monkeypatch):
     assert s.last_value is True
 
 
-def test_simple_widgets_changing_slider_value(monkeypatch):
+def test_simple_widgets_changing_slider_value():
     s = simple_widgets.SimpleWidgets()
     s.run_simple_widgets()
     s._int_slider_widget.value = 12
